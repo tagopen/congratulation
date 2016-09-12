@@ -7,7 +7,7 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            $("[type=submit]").prop("disabled", true); //prevent submit behaviour
+            $("[type=submit]").prop("disabled", true).button('loading'); //prevent submit behaviour and display preloading
             // get values from FORM
             var form = $form.attr("name");
             var name = $form.find("[name=name]").val();
@@ -40,8 +40,8 @@ $(function() {
                     $('.success > .alert-success')
                         .append('</div>');
 
-                    // remove prevent submit behaviour
-                    $("[type=submit]").prop("disabled", false);  
+                    // remove prevent submit behaviour and disable preloading
+                    $("[type=submit]").prop("disabled", false).button('reset');  
 
                     //clear all fields
                     $('.contactForm').trigger("reset");
@@ -54,8 +54,8 @@ $(function() {
                     $('.success > .alert-danger').append("<strong>Приносим свои извинения, " + firstName + ", но наш почтовый сервер времено не работает. Попробуйте, отправить сообщение еще раз и сообщите нам о проблеме!");
                     $('.success > .alert-danger').append('</div>');
 
-                    // remove prevent submit behaviour
-                    $("[type=submit]").prop("disabled", false); 
+                    // remove prevent submit behaviour and disable preloading
+                    $("[type=submit]").prop("disabled", false).button('reset'); 
 
                     //clear all fields
                     $('.contactForm').trigger("reset");
