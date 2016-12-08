@@ -5,14 +5,37 @@ body
 .text-danger
   color: #e74c3c
   text-align: left
-@each $ic in step1, step2, step3, step4, step5, step6
+@each $ic in step1, step2, step3, step4, step5, step6, santa
   .ic-#{$ic}
     +sb(#{$ic})
++font('MuseoSansCyrl', 'MuseoSansCyrl-500')
+.list
+  &__item
+    margin: 12px 0
+    font: 400 18px/20px 'PT Sans', sans-serif
+    color: #fff
+  &__icon
+    margin-right: 5px
+    color: #00aff2
+.sub-heading
+  margin: 0 0 40px
+  padding: 30px 40px
+  display: inline-block
+  font: 700 30px/32px 'MuseoSansCyrl', sans-serif
+  color: #fff
+  text-align: center
+  &--bg
+    background-color: #0e5cc1
+    +background-image(linear-gradient(-58deg, #5890d8 0%, #5890d8 0%, #0953b3 100%))
 +comment("home page style")
 
++comment('section example style')
+.example
+  padding: 88px 0 110px
+  background: #fff url(../img/bg7.png) no-repeat scroll bottom center
 +comment('section edge style')
 .edge
-  padding: 140px 0
+  padding: 82px 0
   background: #fff url(../img/bg8.png) no-repeat scroll bottom center
 .step
   margin: 38px 0
@@ -21,3 +44,118 @@ body
   &__descr
     font: 400 20px/30px 'PT Sans', sans-serif
     color: #1c1e20
++comment('section price style')
+.cost
+  padding: 40px 0 73px
+  background: #fff url(../img/bg9.png) no-repeat scroll bottom center
+.package
+  position: relative
+  margin-top: 150px
+  padding: 23px 40px 15px
+  border: 
+    left: 1px solid #00aff2
+    right: 1px solid #00aff2
+  +border-radius(17px)
+  &__label
+    position: absolute
+    margin: auto
+    width: 255px
+    height: 255px
+    top: -125px
+    left: 0
+    right: 0
+    border: 3px dotted #00aff2
+    +border-radius(50%)
+    z-index: 1
+  &__icon
+    margin: 8px
+    +border-radius(inherit)
+  &__heading
+    position: relative
+    margin-bottom: 74px
+    padding: 18px
+    +border-radius(18px)
+    background-color: #ffc600
+    +background-image(linear-gradient(to right, #ae2723 0%, #ae2723 0%, #f7186a 100%))
+    font: 900 24px/32px 'MuseoSansCyrl', sans-serif
+    color: #fff
+    text-align: center
+    z-index: 5
+  &__btn
+    display: block
+    padding: 14px
+    margin: 17px 0
+    background-color: #fff
+    +background-image(linear-gradient(to top, #ff4800 0%, #ffae00 100%))
+    +border-radius(10px)
+    box-shadow: 0 6px 0 #d42d00
+    font: 900 18px/24px 'MuseoSansCyrl', sans-serif
+    text-align: center
+    color: #fff
+    &:hover
+      color: #fff
+      text-decoration: none
+  &__saled
+    font: 700 14px/16px 'PT Sans', sans-serif
+    color: #fff
+    text-align: center
+.price
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    display: block
+    margin: auto
+    width: 70%
+    height: 1px
+    +border-radius(17px)
+    top: 0
+    left: 0
+    right: 0
+    background-color: #00aff2
+  &__discount
+    margin-top: 14px
+    padding: 5px 0
+  &__text
+    float: left
+    font: 400 16px/18px 'PT Sans', sans-serif
+    color: #00aff2
+  &__old
+    float: right
+    font: 400 30px/32px 'PT Sans', sans-serif
+    color: #fff
+    text-decoration: line-through
+  &__new
+    margin: 16px 0
+    font: 900 48px/52px 'MuseoSansCyrl', sans-serif
+    color: #fff
+    text-align: center
++comment('section answer style')
+.answer
+  padding: 92px 0
+  background: #fff url(../img/bg10.png) no-repeat scroll bottom center
+.faq
+  &__item
+    margin: 28px 0
+  &__question
+    padding: 25px 70px
+    background-color: #fff
+    +border-radius(15px)
+    +box-shadow(0 0 15px rgba(0, 0, 0, 0.25))
+    cursor: pointer
+    &-text
+      font: 700 20px/22px 'PT Sans', sans-serif
+      color: #000
+  &__icon 
+    margin-right: 70px
+    vertical-align: middle
+    font-size: 30px
+    color: #0953b3
+    +transition(.3s ease-out all)
+    &--open
+      +rotate(-90)
+  &__answer
+    padding: 36px 162px
+    &-text
+      font: 400 20px/26px 'PT Sans', sans-serif
+      color: #000
