@@ -120,3 +120,61 @@ body {
   color: #e74c3c;
   text-align: left;
 }
+
+.ic-step1:before {
+  width: 192px;
+  height: 192px;
+  background: url('../img/icons-s287502c557.png') 0 -192px no-repeat;
+}
+
+.ic-step2:before {
+  width: 192px;
+  height: 192px;
+  background: url('../img/icons-s287502c557.png') 0 -384px no-repeat;
+}
+
+.ic-step3:before {
+  width: 192px;
+  height: 192px;
+  background: url('../img/icons-s287502c557.png') 0 -576px no-repeat;
+}
+
+.ic-step4:before {
+  width: 192px;
+  height: 192px;
+  background: url('../img/icons-s287502c557.png') 0 0 no-repeat;
+}
+
+.ic-step5:before {
+  width: 192px;
+  height: 192px;
+  background: url('../img/icons-s287502c557.png') 0 -960px no-repeat;
+}
+
+.ic-step6:before {
+  width: 192px;
+  height: 192px;
+  background: url('../img/icons-s287502c557.png') 0 -768px no-repeat;
+}
+
+/* ---------------------------------------- */
+/* H O M E    P A G E    S T Y L E          */
+/* ---------------------------------------- */
+/* ---------------------------------------- */
+/* S E C T I O N    E D G E    S T Y L E    */
+/* ---------------------------------------- */
+.edge {
+  padding: 140px 0;
+  background: #fff url(../img/bg8.png) no-repeat scroll bottom center;
+}
+
+.step {
+  margin: 38px 0;
+}
+.step__icon {
+  margin-bottom: 45px;
+}
+.step__descr {
+  font: 400 20px/30px "PT Sans", sans-serif;
+  color: #1c1e20;
+}
