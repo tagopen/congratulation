@@ -87,7 +87,7 @@
             <li><a href="#">Список имён</a></li>
             <li><a href="#">Цены</a></li>
             <li><a href="#">Вопросы</a></li>
-            <li><a class="navbar__btn video-btn" href="#" data-toggle="modal" data-target="#callback" data-backdrop="static">Заказать</a></li>
+            <li><a class="navbar__btn video-btn" data-toggle="modal" data-target="#callback">Заказать</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -527,8 +527,8 @@
         </div>
       </div>
     </footer>
-
-    <div class="modal fade in" id="callback" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false">
+    <!--     MODAL STYLES   -->
+    <div class="modal fade in" id="callback1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>   
@@ -555,6 +555,32 @@
         </div>        
       </div>      
     </div>
+
+
+
+     <div class="modal fade" id="callback" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal__size">
+          <div class="modal-content modal__content">
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+              <div class="modal__head">
+                <p class="modal__heading">Заказать обратный звонок</p>
+              </div>
+                  <form name="Шапка" class="contactForm modal__form" method="post" action="mail/mail.php">
+                      <div class="form-group modal__group">
+                        <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </div>
+                      <div class="form-group modal__group">
+                        <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Ваш номер телефона" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="video-btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется..." style="width: 100%;margin: 0">Оставить заявку</button>
+                      </div>
+                    </form>
+            </div>
+          </div>
+        </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

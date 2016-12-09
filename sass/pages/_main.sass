@@ -82,7 +82,7 @@ body
     font-size: 30px
     line-height: 36px
 .video-btn
-  display: block
+  display: inline-block
   padding: 14px
   margin: 17px 0
   +background-image(linear-gradient(to top, #ff4800 0%, #ffae00 100%))
@@ -370,3 +370,39 @@ body
     &:hover
       color: #fff
       text-decoration: none
++comment("modal styles")  
+.modal
+  &__size
+    max-width: 420px
+  &__close
+    position: absolute
+    top: -25px
+    right: -25px
+    color: #fff
+    opacity: 1
+    &:hover
+      opacity: 1
+      color: #fff  
+  &__content
+    position: relative
+    padding: 50px 30px   
+    text-align: center   
+    +br(15px)
+  &__group
+    margin-bottom: 20px  
+    position: relative
+    .fa
+      position: absolute
+      left: 25px
+      top: 16px
+      font-size: 20px
+      color: #585858
+  &__input
+    padding: 15px 10px 15px 60px
+    height: auto
+    +br(15px)  
+    color: #585858
+    font: 400 18px/20px 'PT Sans', sans-serif
+  &__heading
+    font: 600 24px/26px 'PT Sans', sans-serif
+    margin-bottom: 25px  
