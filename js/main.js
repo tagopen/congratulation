@@ -1,8 +1,17 @@
-/*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+// Equal Height plugin
+$.fn.equialHeight = function() {
+  var $tallestcolumn = 0;
+  var $currentHeight = 0;
+  $.each($(this), function (index, value) {
+    $currentHeight = $(this).height();
+    if($currentHeight > $tallestcolumn)
+    {
+      $tallestcolumn = $currentHeight;
+    }
+  });
+  $(this).height($tallestcolumn);
+  return $(this);
+} 
 
 // Old browser notification
 $(function() { 
@@ -30,4 +39,15 @@ $(function() {
     $(this).find('.faq__icon').toggleClass('faq__icon--open');
     $(this).siblings('.faq__answer').slideToggle();
   });
+});
+
+// Equal height
+$('.card__descr, .card__photo').equialHeight();
+
+// Countdown
+$('.countdown').countdown('2020/10/10', function(event) {
+  var $this = $(this).html(event.strftime(''
+    + '<div class="clearfix countdown__item"><div class="countdown__time">%H</div><div class="countdown__text">часов</div></div>'
+    + '<div class="clearfix countdown__item"><div class="countdown__time">%M</div><div class="countdown__text">минут</div></div>'
+    + '<div class="clearfix countdown__item"><div class="countdown__time">%S</div><div class="countdown__text">секунд</div></div>'));
 });

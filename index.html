@@ -66,10 +66,10 @@
     <![endif]-->
   </head>
   <body>
-    <i class="ic ic-tree-left"></i>
-    <i class="ic ic-tree-right"></i>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container navbar__container">
+        <i class="ic ic-tree-left navbar__icon navbar__icon--left"></i>
+        <i class="ic ic-tree-right navbar__icon navbar__icon--right"></i>
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -81,13 +81,13 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse navbar-ex1-collapse text-center">
+          <ul class="nav navbar-nav ">
             <li class="active"><a href="#">Пример</a></li>
             <li><a href="#">Список имён</a></li>
             <li><a href="#">Цены</a></li>
             <li><a href="#">Вопросы</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="#">Заказать</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -99,29 +99,32 @@
           <div class="col-md-6">
             <h1 class="heading">Именное видеопоздравление <br/>от Деда Мороза <br/>с фотографией ребёнка</h1>
             <ul class="list-unstyled intro__list list list--bg">
-              <li class="list__item"><i class="fa fa-snowflake-o list__icon"></i>Поздравление на руссом и украинском языке</li>
-              <li class="list__item"><i class="fa fa-snowflake-o list__icon"></i>Более 500 имен доступно для выбора</li>
-              <li class="list__item"><i class="fa fa-snowflake-o list__icon"></i>Подарок от Дедушки Мороза – <br/>натуральная карамель</li>
+              <li class="list__item list__item--dark"><i class="fa fa-snowflake-o list__icon list__icon--dark"></i>Поздравление на руссом и украинском языке</li>
+              <li class="list__item list__item--dark"><i class="fa fa-snowflake-o list__icon list__icon--dark"></i>Более 500 имен доступно для выбора</li>
+              <li class="list__item list__item--dark"><i class="fa fa-snowflake-o list__icon list__icon--dark"></i>Подарок от Дедушки Мороза – <br/>натуральная карамель</li>
             </ul><!-- /.list -->
+            <a href="#" class="intro__btn video-btn">Подарить ребенку новогоднюю сказку 2017</a>
           </div><!-- /.col-md-6 -->
         </div><!-- /.row -->
         <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <div class="sale">
-              <div class="sale__descr">Скидка 20% на все продукты мастерской <br/> Дедушки морозадо 15 декабря</div>
-              <div class="timer">
+          <div class="col-md-11 col-md-offset-1">
+            <div class="clearfix sale">
+              <div class="sale__descr">Скидка 20% на все продукты мастерской <br/> Дедушки мороза до 15 декабря</div>
+              <div class="sale__timer timer">
                 <div class="timer__title">До конца акции осталось:</div>
-                <div class="clearfix timer__item">
-                  <div class="timer__hour">06</div>
-                  <div class="timer__text">часов</div>
-                </div>
-                <div class="clearfix timer__item">
-                  <div class="timer__hour">33</div>
-                  <div class="timer__text">минут</div>
-                </div>
-                <div class="clearfix timer__item">
-                  <div class="timer__hour">02</div>
-                  <div class="timer__text">секунд</div>
+                <div class="countdown">
+                  <div class="clearfix countdown__item">
+                    <div class="countdown__time">06</div>
+                    <div class="countdown__text">часов</div>
+                  </div>
+                  <div class="clearfix countdown__item">
+                    <div class="countdown__time">33</div>
+                    <div class="countdown__text">минут</div>
+                  </div>
+                  <div class="clearfix countdown__item">
+                    <div class="countdown__time">02</div>
+                    <div class="countdown__text">секунд</div>
+                  </div>
                 </div>
               </div><!-- /.timer -->
             </div><!-- /.sale-->
@@ -134,14 +137,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12  text-center">
-            <h2 class="sub-heading sub-heading--bg">Узнайте все о подарке за 2 минуты</h2>
+            <h2 class="about__sub-heading sub-heading sub-heading--bg">Узнайте все о подарке за 2 минуты</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-10 col-offset-md-1">
-            <div class="embed-responsive embed-responsive-16by9 about__video">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r6hTdDjbVc0" allowfullscreen></iframe>
-            </div><!-- /.about__video -->
+          <div class="col-md-10 col-md-offset-1">
+            <div class="video">
+              <div class="embed-responsive video__box">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r6hTdDjbVc0" allowfullscreen></iframe>
+              </div><!-- /.about__video -->
+            </div><!-- /.video -->
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
@@ -150,17 +155,19 @@
     <section class="wishes">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-offset-md-3">
+          <div class="col-md-12 text-center">
             <h2 class="sub-heading">Поздравление в электроном формате</h2>
           </div>
         </div>
         <div class="row card">
-          <div class="col-md-1 col-md-5">
-            <div class="card__photo"></div>
+          <div class="col-md-6">
+            <div class="card__photo"><i class="ic ic-packet1 card__img"></i></div>
           </div>
           <div class="col-md-6">
-            <div class="card__text card__text--white">Вы получите видеофайл с поздравлением ребенка на mail в течении дня после оплаты. Просто и удобство, без ожидания доставки! После того, как прейдет ссылка, Вы сохраняете видеофайл и смотрите в любое время</div>
-            <a class="card__btn">Получить персональную ссылку на скачивание</a>
+            <div class="card__descr">
+              <div class="card__text card__text--white">Вы получите видеофайл с поздравлением ребенка на mail в течении дня после оплаты. Просто и удобство, без ожидания доставки! После того, как прейдет ссылка, Вы сохраняете видеофайл и смотрите в любое время</div>
+              <a class="card__btn video-btn">Получить персональную ссылку на скачивание</a>
+            </div>
           </div>
         </div>
       </div><!-- /.container -->
@@ -169,17 +176,19 @@
     <section class="disk">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-offset-md-3">
-            <h2 class="sub-heading">Новогодний конверт с диском</h2>
+          <div class="col-md-12 text-center">
+            <h2 class="sub-heading sub-heading--bg">Новогодний конверт с диском</h2>
           </div>
         </div>
         <div class="row card">
-          <div class="col-md-1 col-md-5">
-            <div class="card__photo"></div>
+          <div class="col-md-6">
+            <div class="card__photo"><i class="ic ic-packet2 card__img"></i></div>
           </div>
           <div class="col-md-6">
-            <div class="card__text">Вы получите брендированный диск и тематично оформленный конверт от Дедушки мороза Положите конверт под елку, запустите видео и наблюдайте за счастьем на лице ребенка положить под елку, что создаст!</div>
-            <a class="card__btn">Получить персональную ссылку на скачивание</a>
+            <div class="card__descr">
+              <div class="card__text">Вы получите брендированный диск и тематично оформленный конверт от Дедушки мороза Положите конверт под елку, запустите видео и наблюдайте за счастьем на лице ребенка положить под елку, что создаст!</div>
+              <a class="card__btn video-btn">Получить персональную ссылку на скачивание</a>
+            </div>
           </div>
         </div>
       </div><!-- /.container -->
@@ -188,17 +197,19 @@
     <section class="sweet">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-offset-md-3">
-            <h2 class="sub-heading">Праздничная коробочка с карамелью и диском</h2>
+          <div class="col-md-12 text-center">
+            <h2 class="sub-heading sub-heading--bg">Праздничная коробочка с карамелью и диском</h2>
           </div>
         </div>
         <div class="row card">
-          <div class="col-md-1 col-md-5">
-            <div class="card__photo"></div>
+          <div class="col-md-6">
+            <div class="card__photo"><i class="ic ic-packet3 card__img"></i></div>
           </div>
           <div class="col-md-6">
-            <div class="card__text card__text--white">Вы получите тематичную коробочку в, которой Ваш ребенок найдет натуральную карамель высокого качества брендированный диск с поздравлением от Дедушки мороза</div>
-            <a class="card__btn">Получить персональную ссылку на скачивание</a>
+            <div class="card__descr">
+              <div class="card__text">Вы получите тематичную коробочку в, которой Ваш ребенок найдет натуральную карамель высокого качества брендированный диск с поздравлением от Дедушки мороза</div>
+              <a class="card__btn video-btn">Получить персональную ссылку на скачивание</a>
+            </div>
           </div>
         </div>
       </div><!-- /.container -->
@@ -264,10 +275,12 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-10 col-offset-md-1">
-            <div class="embed-responsive embed-responsive-16by9 about__video">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r6hTdDjbVc0" allowfullscreen></iframe>
-            </div><!-- /.about__video -->
+          <div class="col-md-10 col-md-offset-1">
+            <div class="video">
+              <div class="embed-responsive video__box">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r6hTdDjbVc0" allowfullscreen></iframe>
+              </div><!-- /.about__video -->
+            </div><!-- /.video -->
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
@@ -339,7 +352,7 @@
                   </div>
                   <div class="price__new">78грн</div>
                 </li>
-                <a href="" class="package__btn">Получить ссылку для загрузки видео</a>
+                <a href="" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
                 <li class="package__saled">Продано: <span class="package__number">180</span> пакетов</li>
               </ul>
             </div>
@@ -361,7 +374,7 @@
                   </div>
                   <div class="price__new">132грн</div>
                 </li>
-                <a href="" class="package__btn">Получить ссылку для загрузки видео</a>
+                <a href="" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
                 <li class="package__saled">Продано: <span class="package__number">180</span> пакетов</li>
               </ul>
             </div>
@@ -384,7 +397,7 @@
                   </div>
                   <div class="price__new">158грн</div>
                 </li>
-                <a href="" class="package__btn">Получить ссылку для загрузки видео</a>
+                <a href="" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
                 <li class="package__saled">Продано: <span class="package__number">180</span> пакетов</li>
               </ul>
             </div>
@@ -474,14 +487,14 @@
     </section><!-- /.answer -->
 
     <footer class="footer">
-      <div class="container">
-        <i class="ic ic- footer__icon"></i>
+      <div class="container footer__container">
+        <i class="ic ic-tree footer__logo"></i>
         <div class="row">
-          <div class="col-md-2 col-md-offset-6">
+          <div class="col-md-3 col-md-offset-5">
             <div class="phone">
-              <div class="phone__number">+38&nbsp;(000)&nbsp;000-00-00</div>
-              <div class="phone__number">+38&nbsp;(000)&nbsp;000-00-00</div>
-              <div class="phone__number">+38&nbsp;(000)&nbsp;000-00-00</div>
+              <a href="tel:+3800000000000" class="phone__number">+38&nbsp;(000)&nbsp;000-00-00</a>
+              <a href="tel:+3800000000000" class="phone__number">+38&nbsp;(000)&nbsp;000-00-00</a>
+              <a href="tel:+3800000000000" class="phone__number">+38&nbsp;(000)&nbsp;000-00-00</a>
             </div>
           </div>
           <div class="col-md-3 col-md-offset-1">
@@ -508,9 +521,6 @@
     <!-- Old browsers reject JavaScript -->
     <script src="js/jquery.reject.js"></script>
 
-    <!-- Equial Heights JavaScript -->
-    <script src="js/jQuery.equalHeights.js"></script>
-
     <!-- Navbar-fixed-top JavaScript -->
     <!--<script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.min.js"></script>-->
@@ -519,8 +529,8 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
     
-    <!-- Slick-Slider JavaScript -->
-    <script src="js/slick.js"></script>
+    <!--  Countdown JavaScript -->
+    <script src="js/jquery.countdown.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>

@@ -1,22 +1,18 @@
 +comment('general style')
 body
-  position: relative
+  overflow-x: hidden
 +ic
 .text-danger
   color: #e74c3c
   text-align: left
-@each $ic in step1, step2, step3, step4, step5, step6, santa
+@each $ic in step1, step2, step3, step4, step5, step6, santa, tree, tree-left, tree-right, packet1, packet2, packet3
   .ic-#{$ic}
     +sb(#{$ic})
 +font('MuseoSansCyrl', 'MuseoSansCyrl-500')
-.list
-  &__item
-    margin: 12px 0
-    font: 400 18px/20px 'PT Sans', sans-serif
-    color: #fff
-  &__icon
-    margin-right: 5px
-    color: #00aff2
+.heading
+  margin-bottom: 40px
+  font: 700 36px/49px 'MuseoSansCyrl', sans-serif
+  color: #0953b3
 .sub-heading
   margin: 0 0 40px
   padding: 30px 40px
@@ -27,16 +23,118 @@ body
   &--bg
     background-color: #0e5cc1
     +background-image(linear-gradient(-58deg, #5890d8 0%, #5890d8 0%, #0953b3 100%))
++cm('new year tree')
+.navbar
+  z-index: 10
+  &__container
+    position: relative
+  &__icon
+    position: absolute
+    top: -30px
+    z-index: 10
+    &--left
+      left: -368px
+    &--right
+      right: -377px
+.navbar-nav
+  display: inline-block
+  float: none
+.navbar-default
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  padding: 15px 0 61px
+  border-color: transparent
+  background: transparent url(../img/navbar.png) no-repeat scroll bottom center
+.list
+  &--bg
+    padding: 1px 15px
+    background: transparent url(../img/list.png) no-repeat scroll 0 0
+  &__item
+    margin: 12px 0
+    font: 400 18px/20px 'PT Sans', sans-serif
+    color: #fff
+    &--dark
+      margin: 5px 0
+      font: 700 23px/36px 'PT Sans', sans-serif
+      color: #000
+  &__icon
+    margin-right: 5px
+    color: #00aff2
+    &--dark
+      margin-right: 36px
+      color: #0e5cc1
+.video-btn
+  display: block
+  padding: 14px
+  margin: 17px 0
+  background-color: #fff
+  +background-image(linear-gradient(to top, #ff4800 0%, #ffae00 100%))
+  +border-radius(10px)
+  box-shadow: 0 6px 0 #d42d00
+  font: 900 18px/24px 'MuseoSansCyrl', sans-serif
+  text-align: center
+  color: #fff
+  &:hover,
+  &:focus
+    color: #fff
+    text-decoration: none
+.video
+  background-color: #0e5cc1
+  +box-shadow(0 0 25px rgba(0, 0, 0, 0.75))
+  &__box
+    padding-bottom: 45%
+.card
+  &__btn
+    width: 80%
+    font-size: 14px
+  &__text
+    margin-bottom: 65px
+    font: 400 24px/36px 'PT Sans', sans-serif
+    color: #212121
+    &--white
+      color: #fff
 +comment("home page style")
 
++comment('section intro style')
+.intro
+  position: relative
+  padding: 160px 0 90px
+  background: transparent url(../img/bg1.png) no-repeat scroll bottom center
+  &__btn
+    margin-bottom: 62px
++comment('section about style')
+.about
+  margin-top: -40px
+  padding: 94px 0 136px
+  background: transparent url(../img/bg2.png) no-repeat scroll bottom center
+  &__sub-heading
+    margin-bottom: 60px
++comment('section wishes style')
+.wishes
+  padding: 120px 0 85px
+  background: transparent url(../img/bg3.png) no-repeat scroll bottom center
++comment('section disk style')
+.disk
+  padding: 80px 0 100px
+  background: transparent url(../img/bg4.png) no-repeat scroll bottom center
++comment('section sweet style')
+.sweet
+  padding: 46px 0 130px
+  background: transparent url(../img/bg5.png) no-repeat scroll bottom center
++comment('section review style')
+.review
+  padding: 123px 0
+  background: transparent url(../img/bg6.png) no-repeat scroll bottom center
 +comment('section example style')
 .example
-  padding: 88px 0 110px
-  background: #fff url(../img/bg7.png) no-repeat scroll bottom center
+  padding: 33px 0 110px
+  background: transparent url(../img/bg7.png) no-repeat scroll bottom center
 +comment('section edge style')
 .edge
   padding: 82px 0
-  background: #fff url(../img/bg8.png) no-repeat scroll bottom center
+  background: transparent url(../img/bg8.png) no-repeat scroll bottom center
 .step
   margin: 38px 0
   &__icon
@@ -44,6 +142,37 @@ body
   &__descr
     font: 400 20px/30px 'PT Sans', sans-serif
     color: #1c1e20
+.sale
+  padding: 20px 144px 30px 72px
+  background: transparent url(../img/sale.png) no-repeat scroll 0 0
+  &__descr
+    padding: 20px 0
+    float: left
+    font: 700 24px/36px 'PT Sans', sans-serif
+    color: #fff
+  &__timer
+    float: right
+.timer
+  &__title
+    margin-bottom: 18px
+    font: 400 18px/18px 'PT Sans', sans-serif
+    color: #fff
+    text-align: center
+.countdown
+  &__item
+    margin: 0 7px
+    padding: 18px
+    width: 98px
+    height: 66px
+    float: left
+    background-color: #1166d4
+    +background-image(linear-gradient(to top, #c2c2c2 0%, #c2c2c2 1%, #f7f7f7 100%))
+    +border-radius(15px)
+    text-align: center
+  &__time
+    font: 700 30px/20px 'PT Sans', sans-serif
+  &__text
+    font: 700 18px/18px 'PT Sans', sans-serif
 +comment('section price style')
 .cost
   padding: 40px 0 73px
@@ -82,19 +211,7 @@ body
     text-align: center
     z-index: 5
   &__btn
-    display: block
-    padding: 14px
     margin: 17px 0
-    background-color: #fff
-    +background-image(linear-gradient(to top, #ff4800 0%, #ffae00 100%))
-    +border-radius(10px)
-    box-shadow: 0 6px 0 #d42d00
-    font: 900 18px/24px 'MuseoSansCyrl', sans-serif
-    text-align: center
-    color: #fff
-    &:hover
-      color: #fff
-      text-decoration: none
   &__saled
     font: 700 14px/16px 'PT Sans', sans-serif
     color: #fff
@@ -132,7 +249,7 @@ body
     text-align: center
 +comment('section answer style')
 .answer
-  padding: 92px 0
+  padding: 92px 0 154px
   background: #fff url(../img/bg10.png) no-repeat scroll bottom center
 .faq
   &__item
@@ -159,3 +276,21 @@ body
     &-text
       font: 400 20px/26px 'PT Sans', sans-serif
       color: #000
++comment('section footer style')
+.footer
+  margin-bottom: 90px
+  padding: 67px 0 74px
+  background: #fff url(../img/bg_footer.png) no-repeat scroll bottom center
+  &__container
+    position: relative
+  &__logo
+    position: absolute
+    left: 75px
+    top: -182px
+.phone
+  &__number
+    font: 700 20px/36px 'PT Sans', sans-serif
+    color: #fff
+    &:hover
+      color: #fff
+      text-decoration: none
