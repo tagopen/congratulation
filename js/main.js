@@ -33,6 +33,26 @@ $(function() {
   });
 });
 
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+// Fixed navbar on Scroll
+if(!$('.navbar-toggle').is(':visible')) {
+  $('.navbar').affix({
+    offset: {
+      top: $('.intro').offset().top + $('.intro').innerHeight()
+    }
+  }); 
+}
+
 $(function() {
   $('.faq__answer').hide();
   $('.faq__question').on('click', function() {
