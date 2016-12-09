@@ -254,7 +254,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="slide__photo">
-                        <img class="img-responsive slide__img" src="img/slide1.png" alt="Кристина">
+                        <img class="img-responsive slide__img" src="img/slide2.png" alt="Кристина">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -270,7 +270,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="slide__photo">
-                        <img class="img-responsive slide__img" src="img/slide1.png" alt="Кристина">
+                        <img class="img-responsive slide__img" src="img/slide3.png" alt="Кристина">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -286,7 +286,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="slide__photo">
-                        <img class="img-responsive slide__img" src="img/slide1.png" alt="Кристина">
+                        <img class="img-responsive slide__img" src="img/slide4.png" alt="Кристина">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -302,7 +302,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="slide__photo">
-                        <img class="img-responsive slide__img" src="img/slide1.png" alt="Кристина">
+                        <img class="img-responsive slide__img" src="img/slide5.png" alt="Кристина">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -318,7 +318,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="slide__photo">
-                        <img class="img-responsive slide__img" src="img/slide1.png" alt="Кристина">
+                        <img class="img-responsive slide__img" src="img/slide6.png" alt="Кристина">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -334,7 +334,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="slide__photo">
-                        <img class="img-responsive slide__img" src="img/slide1.png" alt="Кристина">
+                        <img class="img-responsive slide__img" src="img/slide7.png" alt="Кристина">
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -615,16 +615,19 @@
               <div class="modal__head">
                 <p class="modal__heading">Заказать обратный звонок</p>
               </div>
-                  <form name="Шапка" class="contactForm modal__form" method="post" action="mail/mail.php">
+                  <form name="Шапка" class="contactForm modal__form" method="post" action="mail/mail.php" novalidate>
                       <div class="form-group modal__group">
-                        <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                        <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Ваше имя" required data-validation-required-message="Это поле обязательно для заполнения." name="name" type="text">
                         <i class="fa fa-user" aria-hidden="true"></i>
+                        <p class="help-block text-danger"></p>
                       </div>
                       <div class="form-group modal__group">
-                        <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Ваш номер телефона" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                        <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Ваш номер телефона" required data-validation-required-message="Это поле обязательно для заполнения." name="phone" type="tel">
                         <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p class="help-block text-danger"></p>
                       </div>
                       <div class="text-center">
+                        <div class="success"></div>
                         <button type="submit" class="video-btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется..." style="width: 100%;margin: 0">Оставить заявку</button>
                       </div>
                     </form>
