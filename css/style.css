@@ -360,6 +360,7 @@ body {
 .video-btn:hover, .video-btn:focus {
   color: #fff;
   text-decoration: none;
+  outline: none;
 }
 
 .video {
@@ -784,4 +785,108 @@ body {
 .phone__number:hover {
   color: #fff;
   text-decoration: none;
+}
+
+/* ---------------------------------------- */
+/* M O D A L    S T Y L E S                 */
+/* ---------------------------------------- */
+.modal__size {
+  max-width: 420px;
+}
+.modal__close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  color: #fff;
+  opacity: 1;
+}
+.modal__close:hover {
+  opacity: 1;
+  color: #fff;
+}
+.modal__content {
+  position: relative;
+  padding: 50px 30px;
+  text-align: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+}
+.modal__group {
+  margin-bottom: 20px;
+  position: relative;
+}
+.modal__group .fa {
+  position: absolute;
+  left: 25px;
+  top: 16px;
+  font-size: 20px;
+  color: #585858;
+}
+.modal__input {
+  padding: 15px 10px 15px 60px;
+  height: auto;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  color: #585858;
+  font: 400 18px/20px "PT Sans", sans-serif;
+}
+.modal__heading {
+  font: 600 24px/26px "PT Sans", sans-serif;
+  margin-bottom: 25px;
+}
+
+/* ---------------------------------------- */
+/* M O D A L    S T Y L E S                 */
+/* ---------------------------------------- */
+.modal__size {
+  max-width: 420px;
+}
+.modal__close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  color: #fff;
+  opacity: 1;
+}
+.modal__close:hover {
+  opacity: 1;
+  color: #fff;
+}
+.modal__content {
+  position: relative;
+  padding: 50px 30px;
+  text-align: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+}
+.modal__group {
+  margin-bottom: 20px;
+  position: relative;
+}
+.modal__group .fa {
+  position: absolute;
+  left: 25px;
+  top: 16px;
+  font-size: 20px;
+  color: #585858;
+}
+.modal__input {
+  padding: 15px 10px 15px 60px;
+  height: auto;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  color: #585858;
+  font: 400 18px/20px "PT Sans", sans-serif;
+}
+.modal__heading {
+  font: 600 24px/26px "PT Sans", sans-serif;
+  margin-bottom: 25px;
 }

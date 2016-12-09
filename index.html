@@ -87,7 +87,7 @@
             <li><a href="#">Список имён</a></li>
             <li><a class="page-scroll" href="#cost">Цены</a></li>
             <li><a class="page-scroll" href="#faq">Вопросы</a></li>
-            <li><a class="navbar__btn video-btn" href="#" data-toggle="modal" data-target="#callback" data-backdrop="static">Заказать</a></li>
+            <li><a class="navbar__btn video-btn" href="/congratulation/">Заказать</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -103,7 +103,7 @@
               <li class="list__item list__item--dark"><i class="fa fa-snowflake-o list__icon list__icon--dark"></i>Более 500 имен доступно для выбора</li>
               <li class="list__item list__item--dark"><i class="fa fa-snowflake-o list__icon list__icon--dark"></i>Подарок от Дедушки Мороза – <br/>натуральная карамель</li>
             </ul><!-- /.list -->
-            <a href="#" class="intro__btn video-btn">Подарить ребенку новогоднюю сказку 2017</a>
+            <a href="/congratulation/" class="intro__btn video-btn">Подарить ребенку новогоднюю сказку 2017</a>
           </div><!-- /.col-md-6 -->
         </div><!-- /.row -->
         <div class="row">
@@ -144,7 +144,7 @@
           <div class="col-md-10 col-md-offset-1">
             <div class="video">
               <div class="embed-responsive video__box">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r6hTdDjbVc0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kg-qEHftDd8" allowfullscreen></iframe>
               </div><!-- /.about__video -->
             </div><!-- /.video -->
           </div>
@@ -368,7 +368,7 @@
           <div class="col-md-10 col-md-offset-1">
             <div class="video">
               <div class="embed-responsive video__box">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r6hTdDjbVc0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kg-qEHftDd8" allowfullscreen></iframe>
               </div><!-- /.about__video -->
             </div><!-- /.video -->
           </div>
@@ -442,7 +442,7 @@
                   </div>
                   <div class="price__new">78грн</div>
                 </li>
-                <a href="" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
+                <a href="/congratulation/?step=1" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
                 <li class="package__saled">Продано: <span class="package__number">180</span> пакетов</li>
               </ul>
             </div>
@@ -460,11 +460,11 @@
                 <li class="package__price price">
                   <div class="clearfix price__discount">
                     <div class="price__text">Цену снижено <br/>до 15 декабря</div>
-                    <div class="price__old">172&nbsp;грн</div>
+                    <div class="price__old">180&nbsp;грн</div>
                   </div>
-                  <div class="price__new">132грн</div>
+                  <div class="price__new">135грн</div>
                 </li>
-                <a href="" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
+                <a href="/congratulation/?step=2" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
                 <li class="package__saled">Продано: <span class="package__number">180</span> пакетов</li>
               </ul>
             </div>
@@ -483,11 +483,11 @@
                 <li class="package__price price">
                   <div class="clearfix price__discount">
                     <div class="price__text">Цену снижено <br/>до 15 декабря</div>
-                    <div class="price__old">198&nbsp;грн</div>
+                    <div class="price__old">205&nbsp;грн</div>
                   </div>
-                  <div class="price__new">158грн</div>
+                  <div class="price__new">168грн</div>
                 </li>
-                <a href="" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
+                <a href="/congratulation/?step=3" class="package__btn video-btn">Получить ссылку <br/>для загрузки видео</a>
                 <li class="package__saled">Продано: <span class="package__number">180</span> пакетов</li>
               </ul>
             </div>
@@ -594,7 +594,7 @@
             </div>
           </div>
           <div class="col-md-2 col-md-offset-1">
-            <a href="" class="footer__callback video-btn">Заказать звонок</a>
+            <a href="" class="footer__callback video-btn" data-toggle="modal" data-target="#callback" data-backdrop="static">Заказать звонок</a>
             <div class="footer__social social">
               <ul class="list-unstyled text-center social__list">
                 <li class="social__item"><a href="#" class="social__link"><i class="fa fa-vk social__icon"></i></a></li>
@@ -608,33 +608,29 @@
       </div>
     </footer>
 
-    <div class="modal fade in" id="callback" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>   
-          <div class="modal-body">    
-            <h4 class="modal-title" id="confirm_title">Заказать обратный звонок</h4>      
-              <div class="form-group"> 
-                  <form role="form" method="post" name="sentMessage" class="contactForm" novalidate>
-                    <div class="form-group input-group">
-                      <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                      <input type="text" class="form-control" name="name" placeholder="Ваше имя" value="">
-                      <p class="help-block text-danger"></p>
-                    </div>
-                    <br>
-                    <div class="form-group input-group">
-                      <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                      <input type="tel" name="phone" class="form-control" placeholder="Ваш номер телефона" value="">
-                     <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="success"></div>
-                    <button type="submit" class="btn video-btn">Оставить заявку</button>
-                  </form>
-                </div>  
-          </div>                
-        </div>        
-      </div>      
-    </div>
+    <div class="modal fade" id="callback" tabindex="-1" role="dialog"  aria-hidden="true">
+        <div class="modal-dialog modal__size">
+          <div class="modal-content modal__content">
+              <button type="button" class="close modal__close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></button>
+              <div class="modal__head">
+                <p class="modal__heading">Заказать обратный звонок</p>
+              </div>
+                  <form name="Шапка" class="contactForm modal__form" method="post" action="mail/mail.php">
+                      <div class="form-group modal__group">
+                        <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </div>
+                      <div class="form-group modal__group">
+                        <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Ваш номер телефона" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <div class="text-center">
+                        <button type="submit" class="video-btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется..." style="width: 100%;margin: 0">Оставить заявку</button>
+                      </div>
+                    </form>
+            </div>
+          </div>
+        </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -644,10 +640,6 @@
 
     <!-- Old browsers reject JavaScript -->
     <script src="js/jquery.reject.js"></script>
-
-    <!-- Navbar-fixed-top JavaScript -->
-    <!--<script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.min.js"></script>-->
 
     <!-- Validation Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
