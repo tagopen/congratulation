@@ -45,9 +45,10 @@ $(function() {
 $('.card__descr, .card__photo').equialHeight();
 
 // Countdown
-$('.countdown').countdown('2020/10/10', function(event) {
+$('.countdown').countdown('2016/12/15', function(event) {
+  var totalHours = event.offset.totalDays * 24 + event.offset.hours;
   var $this = $(this).html(event.strftime(''
-    + '<div class="clearfix countdown__item"><div class="countdown__time">%H</div><div class="countdown__text">часов</div></div>'
+    + '<div class="clearfix countdown__item"><div class="countdown__time">' + totalHours  + '</div><div class="countdown__text">часов</div></div>'
     + '<div class="clearfix countdown__item"><div class="countdown__time">%M</div><div class="countdown__text">минут</div></div>'
     + '<div class="clearfix countdown__item"><div class="countdown__time">%S</div><div class="countdown__text">секунд</div></div>'));
 });
