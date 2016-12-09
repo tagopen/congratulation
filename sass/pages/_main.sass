@@ -5,7 +5,7 @@ body
 .text-danger
   color: #e74c3c
   text-align: left
-@each $ic in step1, step2, step3, step4, step5, step6, santa, tree, tree-left, tree-right, packet1, packet2, packet3
+@each $ic in step1, step2, step3, step4, step5, step6, package1, package2, package3, tree, tree-left, tree-right, packet1, packet2, packet3
   .ic-#{$ic}
     +sb(#{$ic})
 +font('MuseoSansCyrl', 'MuseoSansCyrl-500')
@@ -36,6 +36,10 @@ body
       left: -368px
     &--right
       right: -377px
+  &__btn
+    padding: 9px 32px !important
+    font: 900 14px/24px 'MuseoSansCyrl', sans-serif !important
+    color: #fff !important
 .navbar-nav
   display: inline-block
   float: none
@@ -44,9 +48,13 @@ body
   top: 0
   left: 0
   right: 0
-  padding: 15px 0 61px
+  padding: 15px 0 55px
   border-color: transparent
   background: transparent url(../img/navbar.png) no-repeat scroll bottom center
+  .navbar-nav > li > a
+    margin: 0 17px 
+    font: 400 18px/20px 'PT Sans', sans-serif
+    color: #000
 .list
   &--bg
     padding: 1px 15px
@@ -65,11 +73,18 @@ body
     &--dark
       margin-right: 36px
       color: #0e5cc1
+.social
+  &__item
+    display: inline-block
+    margin: 0 4px
+  &__icon
+    color: #fff
+    font-size: 30px
+    line-height: 36px
 .video-btn
   display: block
   padding: 14px
   margin: 17px 0
-  background-color: #fff
   +background-image(linear-gradient(to top, #ff4800 0%, #ffae00 100%))
   +border-radius(10px)
   box-shadow: 0 6px 0 #d42d00
@@ -86,6 +101,12 @@ body
   &__box
     padding-bottom: 45%
 .card
+  &__box
+    display: table
+  &__item
+    position: relative
+    display: table-cell
+    vertical-align: middle
   &__btn
     width: 80%
     font-size: 14px
@@ -95,6 +116,13 @@ body
     color: #212121
     &--white
       color: #fff
+.logo
+  &__img
+    margin: 0 auto
+  &__heading
+    font: 400 16px/36px 'PT Sans', sans-serif
+    color: #fff
+    text-align: center
 +comment("home page style")
 
 +comment('section intro style')
@@ -113,20 +141,37 @@ body
     margin-bottom: 60px
 +comment('section wishes style')
 .wishes
-  padding: 120px 0 85px
+  padding: 100px 0 88px
   background: transparent url(../img/bg3.png) no-repeat scroll bottom center
 +comment('section disk style')
 .disk
-  padding: 80px 0 100px
+  padding: 58px 0 73px
   background: transparent url(../img/bg4.png) no-repeat scroll bottom center
 +comment('section sweet style')
 .sweet
-  padding: 46px 0 130px
+  padding: 100px 0 130px
   background: transparent url(../img/bg5.png) no-repeat scroll bottom center
 +comment('section review style')
 .review
   padding: 123px 0
   background: transparent url(../img/bg6.png) no-repeat scroll bottom center
+.slide
+  &__photo
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 554px
+      height: 554px
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      margin: auto
+      background: transparent url(../img/photo-border.png) no-repeat scroll 0 0
+      +contain
+  &__img
+    +border-radius(50%)
 +comment('section example style')
 .example
   padding: 33px 0 110px
@@ -175,8 +220,9 @@ body
     font: 700 18px/18px 'PT Sans', sans-serif
 +comment('section price style')
 .cost
-  padding: 40px 0 73px
-  background: #fff url(../img/bg9.png) no-repeat scroll bottom center
+  position: relative
+  padding: 40px 0 71px
+  background: transparent url(../img/bg9.png) no-repeat scroll bottom center
 .package
   position: relative
   margin-top: 150px
@@ -249,8 +295,10 @@ body
     text-align: center
 +comment('section answer style')
 .answer
-  padding: 92px 0 154px
-  background: #fff url(../img/bg10.png) no-repeat scroll bottom center
+  margin-top: -35px
+  padding: 128px 0 154px
+  background: #fff url(../img/bg10.png) no-repeat scroll 0 0
+  +cover
 .faq
   &__item
     margin: 28px 0
@@ -278,15 +326,20 @@ body
       color: #000
 +comment('section footer style')
 .footer
-  margin-bottom: 90px
-  padding: 67px 0 74px
-  background: #fff url(../img/bg_footer.png) no-repeat scroll bottom center
+  position: relative
+  margin: -71px 0 90px
+  padding: 136px 0 52px
+  background: transparent url(../img/bg_footer.png) no-repeat scroll bottom center
   &__container
     position: relative
-  &__logo
+  &__icon
     position: absolute
-    left: 75px
+    left: 45px
     top: -182px
+  &__callback
+    font-size: 15px
+  &__partner
+    margin-top: -50px
 .phone
   &__number
     font: 700 20px/36px 'PT Sans', sans-serif

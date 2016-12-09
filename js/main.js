@@ -42,7 +42,7 @@ $(function() {
 });
 
 // Equal height
-$('.card__descr, .card__photo').equialHeight();
+$('.card__box').equialHeight();
 
 // Countdown
 $('.countdown').countdown('2016/12/15', function(event) {
