@@ -155,23 +155,40 @@ body
 .review
   padding: 123px 0
   background: transparent url(../img/bg6.png) no-repeat scroll bottom center
-.slide
-  &__photo
-    &:before
-      content: ''
+  &__control
+    &-group
       position: absolute
-      display: block
-      width: 554px
-      height: 554px
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
       margin: auto
-      background: transparent url(../img/photo-border.png) no-repeat scroll 0 0
-      +contain
-  &__img
+      left: 50%
+      bottom: 54px
+    display: block
+    width: 50px
+    height: 50px
+    margin: 0 15px
+    float: left
+    +box-shadow(0 0 0 2px #000)
     +border-radius(50%)
+    opacity: .5
+    font-size: 24px
+    line-height: 50px
+    color: #000
+    text-align: center
+    +transition(.3s ease-out opacity)
+    &:hover,
+    &:focus
+      color: #000
+      opacity: 1
+      width: 113px
+.slide
+  &__context
+    margin: 130px 0 150px
+  &__name
+    margin-bottom: 48px
+    font: 700 30px/37px 'PT Sans', sans-serif
+    color: #000
+  &__text
+    font: 400 20px/30px 'PT Sans', sans-serif
+    color: #000
 +comment('section example style')
 .example
   padding: 33px 0 110px

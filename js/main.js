@@ -52,3 +52,21 @@ $('.countdown').countdown('2016/12/15', function(event) {
     + '<div class="clearfix countdown__item"><div class="countdown__time">%M</div><div class="countdown__text">минут</div></div>'
     + '<div class="clearfix countdown__item"><div class="countdown__time">%S</div><div class="countdown__text">секунд</div></div>'));
 });
+
+// Count slides in Bootstrap slider
+$('#review').on('slid.bs.carousel', function () { 
+   // This variable contains all kinds of data and methods related to the carousel
+  var carouselData = $(this).data('bs.carousel');
+  // EDIT: Doesn't work in Boostrap >= 3.2
+  //var currentIndex = carouselData.getActiveIndex();
+  var currentIndex = carouselData.getItemIndex(carouselData.$element.find('.item.active'));
+  var total = carouselData.$items.length;
+
+  // Create the text we want to display.
+  // We increment the index because humans don't count like machines
+  var text = (currentIndex + 1) + " /" + total;
+
+  // You have to create a HTML element <div id="carousel-index"></div>
+  // under your carousel to make this work
+  $('.review__slide-count').text(text);
+});

@@ -439,30 +439,52 @@ body {
   padding: 123px 0;
   background: transparent url(../img/bg6.png) no-repeat scroll bottom center;
 }
-
-.slide__photo:before {
-  content: "";
-  position: absolute;
+.review__control {
   display: block;
-  width: 554px;
-  height: 554px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background: transparent url(../img/photo-border.png) no-repeat scroll 0 0;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-  background-position: 50% 50%;
-}
-.slide__img {
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+  float: left;
+  -moz-box-shadow: 0 0 0 2px #000;
+  -webkit-box-shadow: 0 0 0 2px #000;
+  box-shadow: 0 0 0 2px #000;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  opacity: 0.5;
+  font-size: 24px;
+  line-height: 50px;
+  color: #000;
+  text-align: center;
+  -moz-transition: 0.3s ease-out opacity;
+  -o-transition: 0.3s ease-out opacity;
+  -webkit-transition: 0.3s ease-out opacity;
+  -ms-transition: 0.3s ease-out opacity;
+  transition: 0.3s ease-out opacity;
+}
+.review__control-group {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  bottom: 54px;
+}
+.review__control:hover, .review__control:focus {
+  color: #000;
+  opacity: 1;
+  width: 113px;
+}
+
+.slide__context {
+  margin: 130px 0 150px;
+}
+.slide__name {
+  margin-bottom: 48px;
+  font: 700 30px/37px "PT Sans", sans-serif;
+  color: #000;
+}
+.slide__text {
+  font: 400 20px/30px "PT Sans", sans-serif;
+  color: #000;
 }
 
 /* -------------------------------------------- */
@@ -543,7 +565,7 @@ body {
 /* ---------------------------------------- */
 .cost {
   position: relative;
-  padding: 40px 0 73px;
+  padding: 40px 0 71px;
   background: transparent url(../img/bg9.png) no-repeat scroll bottom center;
 }
 
