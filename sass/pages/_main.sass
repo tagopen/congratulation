@@ -6,8 +6,8 @@ body
   color: #e74c3c
   text-align: left
 @each $ic in step1, step2, step3, step4, step5, step6, package1, package2, package3, tree, tree-left, tree-right, packet1, packet2, packet3
-  .ic-#{$ic}
-    +sb(#{$ic})
+  .ic-#$ic
+    +sb(#$ic)
 +font('MuseoSansCyrl', 'MuseoSansCyrl-500')
 .heading
   margin-bottom: 40px
