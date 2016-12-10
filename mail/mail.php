@@ -24,11 +24,7 @@
     );
 
   if (!empty($_POST["user_form"])) {
-    $post['user_form'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-  }
-
-  if (!empty($_POST["email"])) {
-    $post['user_email'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $post['user_form'] = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_EMAIL);
   }
 
   if (!empty($_POST["name"])) {
@@ -37,10 +33,6 @@
 
   if (!empty($_POST["phone"])) {
     $post['user_phone'] = filter_input(INPUT_POST,'phone', FILTER_SANITIZE_STRING);
-  }
-
-  if (!empty($_POST["message"])) {
-    $post['user_message'] = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
   }
 
   // Insert form data into html

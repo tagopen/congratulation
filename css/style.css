@@ -288,10 +288,6 @@ body {
   float: none;
 }
 
-.affix-top {
-  position: absolute;
-}
-
 .navbar-default {
   top: 0;
   left: 0;
@@ -304,6 +300,14 @@ body {
   margin: 0 17px;
   font: 400 18px/20px "PT Sans", sans-serif;
   color: #000;
+}
+
+.affix {
+  background: transparent url(../img/navbar-affix.png) no-repeat scroll bottom center;
+}
+
+.affix-top {
+  position: absolute;
 }
 
 .list--bg {
