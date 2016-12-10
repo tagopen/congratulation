@@ -42,18 +42,6 @@ $(function() {
   });
 });
 
-(function($) {
-  // jQuery for page scrolling feature - requires jQuery Easing plugin
-  $('a.page-scroll').bind('click', function(event) {
-      var $anchor = $(this);
-      $('html, body').stop().animate({
-          scrollTop: ($($anchor.attr('href')).offset().top - 50)
-      }, 1250, 'easeInOutExpo');
-      event.preventDefault();
-  });
-});
-
-
 // Fixed navbar on Scroll
 if(!$('.navbar-toggle').is(':visible')) {
   $('.navbar').affix({
@@ -77,6 +65,7 @@ $('.card__box').equialHeight();
 // Countdown
 $('.countdown').countdown('2016/12/15', function(event) {
   var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+
   var $this = $(this).html(event.strftime(''
     + '<div class="clearfix countdown__item"><div class="countdown__time">' + totalHours  + '</div><div class="countdown__text">часов</div></div>'
     + '<div class="clearfix countdown__item"><div class="countdown__time">%M</div><div class="countdown__text">минут</div></div>'
@@ -97,4 +86,4 @@ $('#review').on('slid.bs.carousel', function () {
   var text = (currentIndex + 1) + " /" + total;
 
   $('.review__slide-count').text(text);
-}).slid;
+});
