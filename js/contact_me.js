@@ -38,6 +38,8 @@ $(function() {
                     $('.success > .alert-success')
                         .append('</div>');
 
+                    document.location.href="./success.html";
+
                     // remove prevent submit behaviour and disable preloading
                     $("[type=submit]").prop("disabled", false).button('reset');  
 
