@@ -62,14 +62,13 @@ $(function() {
 // Equal height
 $('.card__box').equialHeight();
 
-// Countdown
+// jQuery.countdown http://hilios.github.io/jQuery.countdown/examples/legacy-style.html
 $('.countdown').countdown('2016/12/15', function(event) {
-  var totalHours = event.offset.totalDays * 24 + event.offset.hours;
 
   var $this = $(this).html(event.strftime(''
-    + '<div class="clearfix countdown__item"><div class="countdown__time">' + totalHours  + '</div><div class="countdown__text">часов</div></div>'
-    + '<div class="clearfix countdown__item"><div class="countdown__time">%M</div><div class="countdown__text">минут</div></div>'
-    + '<div class="clearfix countdown__item"><div class="countdown__time">%S</div><div class="countdown__text">секунд</div></div>'));
+    + '<div class="clearfix countdown__item"><div class="countdown__time">%d</div><div class="countdown__text">дней</div></div>'
+    + '<div class="clearfix countdown__item"><div class="countdown__time">%H</div><div class="countdown__text">часов</div></div>'
+    + '<div class="clearfix countdown__item"><div class="countdown__time">%M</div><div class="countdown__text">минут</div></div>'));
 });
 $('document').ready( function() {
     var totalItems = $('.item').length;
