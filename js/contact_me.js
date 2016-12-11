@@ -23,9 +23,7 @@ $(function() {
                 data: {
                     form: form,
                     name: name,
-                    phone: phone,
-                    email: email,  
-                    message: message
+                    phone: phone
                 },
                 cache: false,
                 success: function() {
