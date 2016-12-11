@@ -845,53 +845,34 @@ body {
 }
 
 /* ---------------------------------------- */
-/* M O D A L    S T Y L E S                 */
+/* T H A N K S    S T Y L E S               */
 /* ---------------------------------------- */
-.modal__size {
-  max-width: 420px;
+.thanks__intro {
+  padding: 200px 0 240px;
+  background-position: top center;
 }
-.modal__close {
-  position: absolute;
-  top: -25px;
-  right: -25px;
-  color: #fff;
-  opacity: 1;
-}
-.modal__close:hover {
-  opacity: 1;
-  color: #fff;
-}
-.modal__content {
-  position: relative;
-  padding: 50px 30px;
-  text-align: center;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  border-radius: 15px;
-}
-.modal__group {
+.thanks__heading {
+  color: #0953b3;
+  font: 400 36px/40px "MuseoSansCyrl", sans-serif;
   margin-bottom: 20px;
-  position: relative;
 }
-.modal__group .fa {
-  position: absolute;
-  left: 25px;
-  top: 16px;
-  font-size: 20px;
-  color: #585858;
+.thanks__subheading {
+  padding: 5px 15px 10px 0;
+  display: inline-block;
+  background: url(../img/thanksbg_white.png) no-repeat;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-position: 50% 50%;
+  margin: 0 0 25px;
+  color: #000;
+  font: 700 25px/26px "PT Sans", sans-serif;
 }
-.modal__input {
-  padding: 15px 10px 15px 60px;
-  height: auto;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  border-radius: 15px;
-  color: #585858;
-  font: 400 18px/20px "PT Sans", sans-serif;
+.thanks__list {
+  text-align: left;
 }
-.modal__heading {
-  font: 600 24px/26px "PT Sans", sans-serif;
-  margin-bottom: 25px;
+.thanks__list .fa {
+  color: #d42d00;
 }
