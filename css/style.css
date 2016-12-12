@@ -304,6 +304,11 @@ body {
 
 .affix {
   background: transparent url(../img/navbar-affix.png) no-repeat scroll bottom center;
+  -moz-transition: 0.4s ease-out all;
+  -o-transition: 0.4s ease-out all;
+  -webkit-transition: 0.4s ease-out all;
+  -ms-transition: 0.4s ease-out all;
+  transition: 0.4s ease-out all;
 }
 
 .affix-top {
