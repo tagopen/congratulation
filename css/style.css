@@ -308,6 +308,7 @@ body {
 
 .affix-top {
   position: absolute;
+  padding: 15px 0 68px;
 }
 
 .list--bg {
