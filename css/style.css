@@ -301,6 +301,9 @@ body {
   font: 400 18px/20px "PT Sans", sans-serif;
   color: #000;
 }
+.navbar-default .navbar-nav > li > a:hover {
+  color: #f60;
+}
 
 .affix-top {
   position: absolute;
