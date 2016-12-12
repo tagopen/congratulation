@@ -337,13 +337,13 @@ body {
   display: inline-block;
   margin: 0 4px;
 }
-.social__icon {
+.social__link {
   color: #fff;
   font-size: 30px;
   line-height: 36px;
 }
-.social__icon:hover, .social__icon:focus {
-  color: #e40246;
+.social__link:hover, .social__link:focus {
+  color: #ffa100;
   -moz-transition: 0.3s ease-out color;
   -o-transition: 0.3s ease-out color;
   -webkit-transition: 0.3s ease-out color;

@@ -24,7 +24,7 @@
     );
 
   if (!empty($_POST["user_form"])) {
-    $post['user_form'] = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_EMAIL);
+    $post['user_form'] = filter_input(INPUT_POST, 'form', FILTER_SANITIZE_EMAIL);
   }
 
   if (!empty($_POST["name"])) {
