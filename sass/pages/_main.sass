@@ -111,7 +111,8 @@ body
     text-decoration: none
     outline: none
     background-image: linear-gradient(to top, rgb(255, 153, 0) 0%, #ffae00 100%)
-    +transition(.3s ease-out all)
+    box-shadow: 0 3px 0 #d42d00
+    +transition(.2s ease-out all)
 
 .video
   background-color: #0e5cc1
@@ -305,18 +306,18 @@ body
     text-align: center
 .price
   position: relative
-  &:before
-    content: ''
-    position: absolute
-    display: block
-    margin: auto
-    width: 70%
-    height: 1px
-    +border-radius(17px)
-    top: 0
-    left: 0
-    right: 0
-    background-color: #00aff2
+  //&:before
+  //  content: ''
+  //  position: absolute
+  //  display: block
+  //  margin: auto
+  //  width: 70%
+  //  height: 1px
+  //  +border-radius(17px)
+  //  top: 0
+  //  left: 0
+  //  right: 0
+  //  background-color: #00aff2
   &__discount
     margin-top: 14px
     padding: 5px 0
@@ -446,4 +447,13 @@ body
     text-align: left  
     .fa
       color: #d42d00
-
+.copyright
+  color: #fff
+  &__link
+    font: 700 20px/20px 'PT Sans', sans-serif
+    color: #fff
+    text-decoration: underline
+    &:hover,
+    &:active
+      color: #fff
+      text-decoration: underline

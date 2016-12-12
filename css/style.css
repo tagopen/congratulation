@@ -386,11 +386,12 @@ body {
   text-decoration: none;
   outline: none;
   background-image: linear-gradient(to top, #ff9900 0%, #ffae00 100%);
-  -moz-transition: 0.3s ease-out all;
-  -o-transition: 0.3s ease-out all;
-  -webkit-transition: 0.3s ease-out all;
-  -ms-transition: 0.3s ease-out all;
-  transition: 0.3s ease-out all;
+  box-shadow: 0 3px 0 #d42d00;
+  -moz-transition: 0.2s ease-out all;
+  -o-transition: 0.2s ease-out all;
+  -webkit-transition: 0.2s ease-out all;
+  -ms-transition: 0.2s ease-out all;
+  transition: 0.2s ease-out all;
 }
 
 .video {
@@ -690,21 +691,6 @@ body {
 .price {
   position: relative;
 }
-.price:before {
-  content: "";
-  position: absolute;
-  display: block;
-  margin: auto;
-  width: 70%;
-  height: 1px;
-  -moz-border-radius: 17px;
-  -webkit-border-radius: 17px;
-  border-radius: 17px;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #00aff2;
-}
 .price__discount {
   margin-top: 14px;
   padding: 5px 0;
@@ -900,4 +886,17 @@ body {
 }
 .thanks__list .fa {
   color: #d42d00;
+}
+
+.copyright {
+  color: #fff;
+}
+.copyright__link {
+  font: 700 20px/20px "PT Sans", sans-serif;
+  color: #fff;
+  text-decoration: underline;
+}
+.copyright__link:hover, .copyright__link:active {
+  color: #fff;
+  text-decoration: underline;
 }
