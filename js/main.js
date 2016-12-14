@@ -58,9 +58,15 @@ $(function() {
     $(this).siblings('.faq__answer').slideToggle();
   });
 });
-
-// Equal height
-$('.card__box').equialHeight();
+// Set equal height
+$(window).on('resize', function(){
+  // For all screen
+  //setEqualHeight($(".work-item"));
+  // Only 767px-
+  if( $( window ).width() >= 768 ) {
+    $('.card__box').equialHeight();
+  }
+}).trigger('resize');
 
 // jQuery.countdown http://hilios.github.io/jQuery.countdown/examples/legacy-style.html
 $('.countdown').countdown('2016/12/15', function(event) {
