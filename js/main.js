@@ -69,7 +69,7 @@ $(window).on('resize', function(){
 }).trigger('resize');
 
 // jQuery.countdown http://hilios.github.io/jQuery.countdown/examples/legacy-style.html
-$('.countdown').countdown('2016/12/15', function(event) {
+$('.countdown').countdown('2016/12/25', function(event) {
 
   var $this = $(this).html(event.strftime(''
     + '<div class="clearfix countdown__item"><div class="countdown__time">%d</div><div class="countdown__text">дней</div></div>'
