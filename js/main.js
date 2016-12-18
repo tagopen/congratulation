@@ -63,7 +63,7 @@ $(window).on('resize', function(){
   // For all screen
   //setEqualHeight($(".work-item"));
   // Only 767px-
-  if( $( window ).width() >= 1200 ) {
+  if( $( window ).width() >= 992 ) {
     $('.card__box').equialHeight();
   }
 }).trigger('resize');

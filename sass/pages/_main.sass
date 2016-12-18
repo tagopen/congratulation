@@ -6,7 +6,7 @@
 .text-danger
   color: #e74c3c
   text-align: left
-@each $ic in step1, step2, step3, step4, step5, step6, package1, package2, package3, tree, tree-left, tree-right, packet1, packet2, packet3
+@each $ic in step1, step2, step3, step4, step5, step6, package1, package2, package3, tree, tree-left, tree-right, packet1, packet2, packet3, olha, welldone, fragolino
   .ic-#{$ic}
     +sb(#{$ic})
 +font('MuseoSansCyrl', 'MuseoSansCyrl-500')
@@ -24,6 +24,9 @@
   &--bg
     background-color: #0e5cc1
     +background-image(linear-gradient(-58deg, #5890d8 0%, #5890d8 0%, #0953b3 100%))
+.sub-heading-3
+  font: 700 24px/36px 'PT Sans', sans-serif
+  color: #000
 +cm('new year tree')
 .navbar
   z-index: 10
@@ -146,16 +149,16 @@
   .card
     &__btn
       width: 100%
-+r(1200)
-  .card
-    &__btn
-      width: 80%
-+r(1200)
++r(992)
   .card
     &__box
       display: table
     &__item
       display: table-cell
++r(1200)
+  .card
+    &__btn
+      width: 80%
 .logo
   &__img
     margin: 0 auto
@@ -404,12 +407,61 @@
     font: 900 48px/52px 'MuseoSansCyrl', sans-serif
     color: #fff
     text-align: center
-+comment('section answer style')
-.answer
++comment('section partner style')
+.partner
   margin-top: -70px
   padding: 128px 0 154px
   background: #fff inline-image('bg_10.png','image/png') no-repeat
   +cover(bottom center)
+.product
+  &__img
+    position: relative
+    display: block
+    margin: 0 auto 20px
+    width: 233px
+    height: 233px
+    overflow: hidden
+    +br(50%)
+    border: 3px dotted #00aff2
+    text-align: center
+    &:before
+      content: ''
+      position: absolute
+      display: inline-block
+      margin: 6px 10px 10px 6px
+      top: 0
+      left: 0
+      width: 217px
+      height: 217px
+      +box-shadow(0 0 5px rgba(0, 0, 0, 0.75))
+      +br(50%)
+    &--1
+      &:before
+        background: #fff inline-image('icons/olha.png','image/png') no-repeat
+        background-position: center center
+    &--2
+      &:before
+        background: #fff inline-image('icons/welldone.png','image/png') no-repeat
+        background-position: center center
+    &--3
+      &:before
+        background: #fff inline-image('icons/fragolino.png','image/png') no-repeat
+        background-position: center center
+  &__name
+    margin-bottom: 60px
+    font: 900 14px/20px 'MuseoSansCyrl', sans-serif
+    color: #0953b3
+    text-align: center
+  &__descr
+    font: 400 20px/22px 'PT Sans', sans-serif
+    color: #000
+    text-align: center
+    &--discount
+      font: 700 20px/22px 'PT Sans', sans-serif
+      color: #0953b3
++comment('section answer style')
+.answer
+  padding: 58px 0 154px
 .faq
   &__item
     margin: 28px 0
@@ -529,6 +581,8 @@
     color: #fff
     text-decoration: underline
     &:hover,
+    &:focus,
     &:active
       color: #fff
       text-decoration: underline
+      outline: none
