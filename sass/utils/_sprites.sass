@@ -8,9 +8,9 @@ $icons: sprite-map("icons/*.png", $layout: smart)
 	height: image-height($path)
 
 //for retina
-=image-sizer($path)
-	width: image-width($path) / 2
-	height: image-height($path) / 2
+=image-sizer($path, $size: 2)
+	width: image-width($path) / $size
+	height: image-height($path) / $size
 
 =sized-sprite($map, $sprite)
 	background: sprite($map, $sprite) no-repeat
@@ -36,6 +36,14 @@ $icons: sprite-map("icons/*.png", $layout: smart)
 		+image-size(sprite-file($map, $sprite))
 		//background: sprite($map, $sprite) no-repeat
 		background-image: inline-image('icons/'+$sprite+'.png','image/png')
+
+//shortcut :before responsive
+=sbr($sprite, $map: $icons)
+	&:before
+		+image-sizer(sprite-file($map, $sprite))
+		//background: sprite($map, $sprite) no-repeat
+		background-image: inline-image('icons/'+$sprite+'.png','image/png')
+
 
 //for retina
 =sr($sprite, $map: $icons)

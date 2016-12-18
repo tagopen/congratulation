@@ -63,7 +63,7 @@ $(window).on('resize', function(){
   // For all screen
   //setEqualHeight($(".work-item"));
   // Only 767px-
-  if( $( window ).width() >= 768 ) {
+  if( $( window ).width() >= 1200 ) {
     $('.card__box').equialHeight();
   }
 }).trigger('resize');
@@ -92,3 +92,12 @@ $('#review').on('slid.bs.carousel', function () {
 
   $('.review__slide-count').text(text);
 });
+// bootstrap swipe slider
+$(document).ready(function() {  
+  $("#review").swiperight(function() {  
+    $(this).carousel('prev');  
+  });  
+  $("#review").swipeleft(function() {  
+    $(this).carousel('next');  
+  });  
+});  

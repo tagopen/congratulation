@@ -1,7 +1,8 @@
 +comment('general style')
-body
-  overflow-x: hidden
 +ic
+.ic
+  &:before
+    +contain(0 0)
 .text-danger
   color: #e74c3c
   text-align: left
@@ -48,8 +49,11 @@ body
   left: 0
   right: 0
   padding: 15px 0 55px
+  overflow: hidden
+  border: 0 none
   border-color: transparent
-  background: transparent url(../img/navbar.png) no-repeat scroll bottom center
+  background: transparent inline-image('navbar.png','image/png') no-repeat
+  +cover(bottom center)
   .navbar-nav > li > a
     margin: 0 17px 
     font: 400 18px/20px 'PT Sans', sans-serif
@@ -60,12 +64,14 @@ body
   position: absolute
   +transition(.4s ease-out all)
 .affix
-  background: transparent url(../img/navbar-affix.png) no-repeat scroll bottom center
+  background: transparent inline-image('navbar-affix.png','image/png') no-repeat
+  +cover(bottom center)
   padding: 15px 0 68px
 .list
   &--bg
     padding: 1px 15px
-    background: transparent url(../img/list.png) no-repeat scroll 0 0
+    background: transparent inline-image('list.png','image/png') no-repeat
+  +cover(bottom center)
   &__item
     margin: 12px 0
     font: 400 18px/20px 'PT Sans', sans-serif
@@ -80,6 +86,9 @@ body
     &--dark
       margin-right: 36px
       color: #0e5cc1
+  &__text
+    &--newstr
+      display: block
 .social
   &__item
     display: inline-block
@@ -120,21 +129,33 @@ body
   &__box
     padding-bottom: 56.3%
 .card
-  &__box
-    display: table
   &__item
     position: relative
-    display: table-cell
     vertical-align: middle
+    text-align: center
   &__btn
-    width: 80%
     font-size: 14px
   &__text
     margin-bottom: 65px
     font: 400 24px/36px 'PT Sans', sans-serif
     color: #212121
+    text-align: left
     &--white
       color: #fff
++r(768)
+  .card
+    &__btn
+      width: 100%
++r(1200)
+  .card
+    &__btn
+      width: 80%
++r(1200)
+  .card
+    &__box
+      display: table
+    &__item
+      display: table-cell
 .logo
   &__img
     margin: 0 auto
@@ -148,32 +169,46 @@ body
 .intro
   position: relative
   padding: 160px 0 90px
-  background: transparent url(../img/bg1.png) no-repeat scroll bottom center
+  background: transparent inline-image('bg_1.png','image/png') no-repeat
+  +cover(bottom center)
   &__btn
     margin-bottom: 62px
 +comment('section about style')
 .about
-  margin-top: -40px
+  margin-top: -50px
   padding: 94px 0 136px
-  background: transparent url(../img/bg2.png) no-repeat scroll bottom center
+  background: transparent inline-image('bg_2.png','image/png') no-repeat
+  +cover(bottom center)
   &__sub-heading
     margin-bottom: 60px
 +comment('section wishes style')
 .wishes
+  position: relative
+  margin: -75px 0 0
   padding: 100px 0 88px
-  background: transparent url(../img/bg3.png) no-repeat scroll bottom center
+  background: transparent inline-image('bg_3.png','image/png') no-repeat
+  +cover(bottom center)
 +comment('section disk style')
 .disk
-  padding: 58px 0 73px
-  background: transparent url(../img/bg4.png) no-repeat scroll bottom center
+  position: relative
+  margin-top: -75px
+  padding: 128px 0 73px
+  background: transparent inline-image('bg_4.png','image/png') no-repeat
+  +cover(bottom center)
 +comment('section sweet style')
 .sweet
+  position: relative
+  margin-top: -75px
   padding: 100px 0 130px
-  background: transparent url(../img/bg5.png) no-repeat scroll bottom center
+  background: transparent inline-image('bg_5.png','image/png') no-repeat
+  +cover(bottom center)
 +comment('section review style')
 .review
+  position: relative
+  margin-top: -75px
   padding: 123px 0
-  background: transparent url(../img/bg6.png) no-repeat scroll bottom center
+  background: transparent inline-image('bg_6.png','image/png') no-repeat
+  +cover(bottom center)
   &__control
     &-group
       position: absolute
@@ -214,14 +249,20 @@ body
   &__text
     font: 400 20px/30px 'PT Sans', sans-serif
     color: #000
+  &__img
+    margin: 0 auto
 +comment('section example style')
 .example
-  padding: 33px 0 110px
-  background: transparent url(../img/bg7.png) no-repeat scroll bottom center
+  margin-top: -70px
+  padding: 83px 0 110px
+  background: transparent inline-image('bg_7.png','image/png') no-repeat
+  +cover(bottom center)
 +comment('section edge style')
 .edge
+  margin-top: -70px
   padding: 82px 0
-  background: transparent url(../img/bg8.png) no-repeat scroll bottom center
+  background: transparent inline-image('bg_8.png','image/png') no-repeat
+  +cover(bottom center)
 .step
   margin: 38px 0
   &__icon
@@ -230,15 +271,29 @@ body
     font: 400 20px/30px 'PT Sans', sans-serif
     color: #1c1e20
 .sale
-  padding: 20px 144px 30px 72px
-  background: transparent url(../img/sale.png) no-repeat scroll 0 0
+  position: relative
+  padding: 8px
+  +border-radius(30px)
+  +background-image(linear-gradient(to right, rgba(72, 144, 238, .8) 0%, rgba(0, 73, 168, .8) 100%))
+  &__box
+    padding: 23px 0
+    +border-radius(20px)
+    background-color: rgba(17, 102, 212, .8)
   &__descr
-    padding: 20px 0
+    margin: 20px 0
     float: left
     font: 700 24px/36px 'PT Sans', sans-serif
     color: #fff
   &__timer
     float: right
++r(992)
+  .sale
+    &__descr
+      font: 700 20px/36px 'PT Sans', sans-serif
++r(1200)
+  .sale
+    &__descr
+      font: 700 24px/36px 'PT Sans', sans-serif
 .timer
   &__title
     margin-bottom: 18px
@@ -249,9 +304,10 @@ body
   &__item
     margin: 0 7px
     padding: 18px
-    width: 98px
+    width: 90px
     height: 66px
     float: left
+    font: 700 18px/18px 'PT Sans', sans-serif
     background-color: #1166d4
     +background-image(linear-gradient(to top, #c2c2c2 0%, #c2c2c2 1%, #f7f7f7 100%))
     +border-radius(15px)
@@ -260,11 +316,24 @@ body
     font: 700 30px/20px 'PT Sans', sans-serif
   &__text
     font: 700 18px/18px 'PT Sans', sans-serif
++r(992)
+  .countdown
+    &__item
+      padding: 15px 10px
+      width: 65px
++r(1200)
+  .countdown
+    &__item
+      padding: 18px
+      width: 90px
 +comment('section price style')
 .cost
   position: relative
-  padding: 40px 0 71px
-  background: transparent url(../img/bg9.png) no-repeat scroll bottom center
+  margin-top: -70px
+  position: relative
+  padding: 80px 0 71px
+  background: transparent inline-image('bg_9.png','image/png') no-repeat
+  +cover(bottom center)
 .package
   position: relative
   margin-top: 150px
@@ -337,10 +406,10 @@ body
     text-align: center
 +comment('section answer style')
 .answer
-  margin-top: -35px
+  margin-top: -70px
   padding: 128px 0 154px
-  background: #fff url(../img/bg10.png) no-repeat scroll 0 0
-  +cover
+  background: #fff inline-image('bg_10.png','image/png') no-repeat
+  +cover(bottom center)
 .faq
   &__item
     margin: 28px 0
@@ -366,12 +435,17 @@ body
     &-text
       font: 400 20px/26px 'PT Sans', sans-serif
       color: #000
++r(768)
+  .faq
+    &__icon
+      margin-right: 35px
 +comment('section footer style')
 .footer
   position: relative
-  margin: -71px 0 90px
+  margin: -81px 0 90px
   padding: 136px 0 52px
-  background: transparent url(../img/bg_footer.png) no-repeat scroll bottom center
+  background: transparent inline-image('bg_11.png','image/png') no-repeat
+  +cover(bottom center)
   &__container
     position: relative
   &__icon
@@ -384,6 +458,7 @@ body
     margin-top: -50px
 .phone
   &__number
+    display: block
     font: 700 20px/36px 'PT Sans', sans-serif
     color: #fff
     &:hover,
@@ -438,7 +513,7 @@ body
   &__subheading
     padding: 5px 15px 10px 0
     display: inline-block
-    background: url(../img/thanksbg_white.png) no-repeat
+    background: transparent inline-image('thanksbg_white.png','image/png') no-repeat
     +contain
     margin: 0 0 25px  
     color: #000
